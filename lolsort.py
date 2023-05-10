@@ -3,9 +3,6 @@
 
 from math import factorial
 from random import shuffle, randrange
-from functools import total_ordering
-
-@total_ordering
 class Candidate(object):
     """Helper object for storing a sequence with its orderliness,
     which is defined by the count of how many ordered pairs
@@ -25,15 +22,9 @@ class Candidate(object):
     def __lt__(self, other):
         return self.orderliness < other.orderliness
 
-    def __eq__(self, other):
-        return self.orderliness == other.orderliness
-
     def __iter__(self):
         return Arbitrator(self.sequence)
-
-    def __str__(self):
-        return str(self.sequence)
-
+    
 class Arbitrator(object):
     """ Simple iterator """
     def __init__(self, sequence):
@@ -100,8 +91,6 @@ def lolsort(sequence):
     worse candidates until left with the winner. At this point
     we have no option but to surrender and reluctantly return
     the winner
-
-    Time complexity is O((N!)^2): there are N! permutations and Arbitrator O(N^2)
     """
     permutations = [Candidate(permutation) for permutation in Permutator(sequence)]
 

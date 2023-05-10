@@ -3,7 +3,7 @@
 
 from math import factorial
 from random import shuffle, randrange
-from functools import total_ordering, reduce
+from functools import total_ordering
 
 @total_ordering
 class Candidate(object):

@@ -16,3 +16,6 @@ High level pseudo code:
 2. calculate orderliness of each permutation
 3. discard least orderly permutations until only one is left
 4. reluctantly return the winner
+
+# ordersort
+An optimized version of the lolsort, it doesn't utilize chance or do unnecessary elimination. It's time complexity is still O(e^(n!)).

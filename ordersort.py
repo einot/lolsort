@@ -22,7 +22,7 @@ def most_ordered(sequence):
 
     return findmax(sequence, len(sequence))
 
-def simplesort(sequence):
+def ordersort(sequence):
     """ ordersort, an incredibly inefficient sorting algorithm
 
     Sort the sequence by first multiplying the problem by 
